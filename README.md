@@ -1,4 +1,4 @@
-# enb-concap
+# enb-debug
 
 Пакет предоставляет конструктор технологий для [ENB][], способный обернуть
 стандартные технологии `bemjson-to-html` в вызовы модуля [concap][], что даёт
@@ -15,18 +15,28 @@
 
 ## How to use
 
+Установите пакет через NPM.
+
+```sh
+npm install enb-debug
+```
+
+И подключайте нужную `bemjson-to-html` технологию, используя конструктор.
+
 ```js
-var html = require('enb-bemxjst/techs/bemjson-to-html');
-var htmlDebuggable = require('enb-concap/techs/to-html-debuggable').using(html);
+var toHtml = require('enb-bemxjst/techs/bemjson-to-html');
+var toHtmlDebuggable = require('enb-debug/techs/to-html-debuggable').using(html);
 
 // ... later in your config replace `html` variable with `htmlDebuggable`
 nodeConfig.addTechs([
   // Полученной технологии совершенно не важно, что делает базовая.
   // Она просто вызывает её внутри себя с теми же опциями
   // и ожидает, что в результате её работы будет HTML.
-  [htmlDebuggable, {/* те же опции */}]
+  [toHtmlDebuggable, {/* те же опции */}]
 ]);
 ```
+
+Happy debugging!
 
 ## License
 
