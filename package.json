@@ -1,0 +1,28 @@
+{
+  "name": "enb-debug",
+  "version": "0.1.0",
+  "description": "ConCap-related techs for ENB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxqfox/enb-debug.git"
+  },
+  "keywords": [
+    "enb",
+    "debug",
+    "console",
+    "capture"
+  ],
+  "author": "Alexey Yaroshevich <zxqfox@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zxqfox/enb-debug/issues"
+  },
+  "homepage": "https://github.com/zxqfox/enb-debug#readme",
+  "dependencies": {
+    "concap": "^0.2.0"
+  }
+}
