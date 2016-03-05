@@ -1,6 +1,6 @@
 {
   "name": "enb-debug",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ConCap-related techs for ENB",
   "main": "index.js",
   "scripts": {
