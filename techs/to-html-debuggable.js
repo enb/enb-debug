@@ -5,7 +5,7 @@ module.exports.using = function(baseTech) {
         .name('to-html-debuggable')
         .methods({
             render: function () {
-                var render = this.__base.apply.bind(this, arguments);
+                var render = this.__base.apply.bind(this.__base, this, arguments);
                 var res = concap.capture(render);
                 this._concapped = concap.getClean();
                 return res;
