@@ -13,12 +13,12 @@ module.exports.using = function(baseTech) {
         })
         .builder(function(files) {
             var _this = this;
-            return this.__base.apply(this, arguments)
+            return Promise.resolve(this.__base.apply(this, arguments))
                 .catch(function(err) {
                     return "<pre>" + err.stack + "</pre>";
                 })
                 .then(function(res) {
-                    var log = _this._concapped ?
+                    var log = _this._concapped && _this._concapped.length ?
                         '<script type="text/javascript">\n;' +
                             concap.render(_this._concapped) +
                         '\n<\/script>\n' : '';
